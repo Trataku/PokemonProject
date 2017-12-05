@@ -1,6 +1,6 @@
 /* Created by Professor Wergeles for CS2830 at the University of Missouri */
 body{
-    background-image: url(images/pokemon-wallpapers-hd-resolution-Is-Cool-Wallpapers-1.jpg);
+    background-image: url(images/82491325.jpg);
     background-size: cover;
 }
 ul {
@@ -69,4 +69,45 @@ fieldset{
   border-color: #e8c291;
   outline: none;
   box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+#submitButton{
+      background-color: #e7e7e7; /* Gray */
+    border: none;
+    color: black;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#submitButton:hover{
+    background-color: white;
+}
+/*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*/
+#wrapper{
+    width: 630px;
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+    margin-top: 20%;
+}
+#aboutBox{
+    text-align: center;
+    overflow: auto;
+    width: 650px;
+    height: 400px;
+}
+
+p{
+    font-size: 36px;
+    color: white;
 }
