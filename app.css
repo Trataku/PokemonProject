@@ -1,0 +1,72 @@
+/* Created by Professor Wergeles for CS2830 at the University of Missouri */
+body{
+    background-image: url(images/pokemon-wallpapers-hd-resolution-Is-Cool-Wallpapers-1.jpg);
+    background-size: cover;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+#informationBar{
+    width: 100%;
+    margin-top: 50px;
+}
+
+
+/*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*/
+
+#loginDropdown:hover #loginContent{
+    background-color: #111;
+    display: block;
+}
+
+#loginContent{
+    display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+fieldset{
+    border: 0;
+}
+
+#inputs input {
+  background: #f1f1f1;
+  padding: 6px 5px;
+  margin: 0 0 5px 0;
+  width: 238px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #ccc inset;
+    display: block;
+}
+
+#inputs input:focus {
+  background-color: #fff;
+  border-color: #e8c291;
+  outline: none;
+  box-shadow: 0 0 0 1px #e8c291 inset;
+}

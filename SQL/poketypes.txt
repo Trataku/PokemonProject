@@ -1,0 +1,16 @@
+Type Weakness1 Weakness2 Weakness3 Weakness4 Weakness5
+
+Normal fight null null null null
+fight flying psychic null null null
+poison ground bug psychic null null
+ground water grass ice null null
+rock fight ground water grass null
+bug flying poison rock fire null
+ghost ghost null null null null
+fire ground rock water null null
+water grass electr null null null
+grass flying poison bug fire ice
+electr ground null null null null
+psychic bug null null null null
+ice fight rock fire null null
+dragon ice dragon null null null
