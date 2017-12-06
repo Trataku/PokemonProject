@@ -30,7 +30,8 @@ li a:hover {
 }
 #informationBar{
     width: 100%;
-    margin-top: 50px;
+    top: 2%;
+    position: absolute;
 }
 
 /*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*/
@@ -116,7 +117,7 @@ p{
 #searchBox{
   width: 30%;
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -139,9 +140,62 @@ p{
 
 #pokeimg{
     position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 50%;
+    width: 25%;
+    max-height: 500px;
+    max-width: 500px;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    border-radius: 30px;
+}
+
+#name{
+    text-transform: uppercase;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 64px;
+}
+
+#imgHolder{
+    max-width: 100%;
+}
+
+.statHolderLeft{
+    position: absolute;
+    top: 57%;
+    left: 30%;
+    width: 10%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.statHolderRight{
+    position: absolute;
+    top: 57%;
+    left: 70%;
+    width: 10%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#type{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
 }

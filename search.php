@@ -90,8 +90,16 @@
     </div>
     <div id="imgHolder">
         <img src="images/" alt="pokemonimg" id="pokeimg">
-        <p><?php  ?></p>
+        <p id="name"><?php print $name ?></p>
+        <div class="statHolderLeft">
+            <p>HP: <?php  print $hp ?></p>
+            <p>ATK: <?php  print $attack ?></p>
+        </div>
+        <div class="statHolderRight">
+            <p>DEF: <?php  print $def ?></p>
+            <p>SPD: <?php  print $speed ?></p>
+        </div>
+        <p id="type"><?php  print $type ?></p>
     </div>
-
 </body>
 </html>
