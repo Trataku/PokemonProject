@@ -1,5 +1,6 @@
 <?php
 // Created by Professor Wergeles for CS2830 at the University of Missouri
+//modified by Dylan Mouser
 
 	// Here we are using sessions to propagate the login
 	// http://php.net/manual/en/book.session.php
