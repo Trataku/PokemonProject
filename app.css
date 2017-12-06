@@ -2,6 +2,7 @@
 body{
     background-image: url(images/82491325.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 ul {
     list-style-type: none;
@@ -31,7 +32,6 @@ li a:hover {
     width: 100%;
     margin-top: 50px;
 }
-
 
 /*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*/
 
@@ -71,7 +71,7 @@ fieldset{
   box-shadow: 0 0 0 1px #e8c291 inset;
 }
 
-#submitButton{
+.submitButton{
       background-color: #e7e7e7; /* Gray */
     border: none;
     color: black;
@@ -84,7 +84,7 @@ fieldset{
     transition-duration: 0.4s;
 }
 
-#submitButton:hover{
+.submitButton:hover{
     background-color: white;
 }
 /*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*/
@@ -110,4 +110,29 @@ fieldset{
 p{
     font-size: 36px;
     color: white;
+}
+
+/*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*/
+#searchBox{
+  width: 30%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#search{
+    width: 100%;
+    position: relative;
+}
+
+#searchBar{
+  float: left;
+  width: 100%;
+  border: 3px solid gray;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
 }

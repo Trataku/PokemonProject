@@ -37,12 +37,17 @@
                             <input type="password" id="pass" name="pass" class="ui-widget-content ui-corner-all" placeholder="Password">
                         </fieldset>
                         <fieldset>
-                            <input type="submit" value="Submit" id="submitButton">
+                            <input type="submit" value="Submit" class="submitButton">
                         </fieldset>
                     </form>
                 </div>
             </li>
         </ul> 
+    </div>
+    <div id="searchBox">
+        <form action="pokemonpage.php" method="GET" id="search">
+            <input type="text" name="query" id="searchBar" placeholder="Search Pokemon Name">
+        </form>
     </div>
     <div id="wrapper">
         <div id="aboutBox">
