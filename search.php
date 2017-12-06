@@ -1,3 +1,39 @@
+<?php
+    require('web_utils.php');
+    $query = $_GET['query'];
+	$action = $_POST['action'];
+	$data = null;
+    
+    if(empty($query)){
+        $data = "<h4>Empty Search Query</h4>";
+        print($data);
+    }
+
+    strtolower($query);
+    ucfirst($query);
+
+    require('db_credentials.php');
+    $mysqli = new mysqli($servername, $username, $password, $dbname);
+
+    $sql = "SELECT * FROM pokemon WHERE name LIKE '%$query%'";
+    if($result = $mysqli->query($sql)){
+        if($result->num_rows == 1){
+            $poke = $result->fetch_assoc();
+        }
+        $result->close();
+    }
+    
+    $mysqli->close(); 
+
+    $id = $poke['id'];
+    $name = $poke['name'];
+    $hp = $poke['HP'];
+    $attack = $poke['Attack'];
+    $def = $poke['Def'];
+    $speed = $poke['Speed'];
+    $type = $poke['Type'];
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -9,6 +45,12 @@
         $(function(){
             $("input[type=submit]").button();
         });
+        $(document).ready(function(){
+            var dir = "images/Sprites/";
+            var extension = ".png";
+            
+            $("#pokeimg").attr('src', dir + <?php print $id ?> + extension).appendTo("#imgHolder");
+        })
     </script>
 </head>
 <body>
@@ -46,6 +88,10 @@
             <input type="text" name="query" id="searchBar" placeholder="Search Pokemon Name">
         </form>
     </div>
-    
+    <div id="imgHolder">
+        <img src="images/" alt="pokemonimg" id="pokeimg">
+        <p><?php  ?></p>
+    </div>
+
 </body>
 </html>

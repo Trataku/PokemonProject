@@ -5,9 +5,7 @@
 <head>
 	<title>Pokemon Informant</title>
 	<link href="app.css" rel="stylesheet" type="text/css">
-    <link href="../jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
-    <script src="../jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
-    <script src="../jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $(function(){
             $("input[type=submit]").button();
@@ -45,7 +43,7 @@
         </ul> 
     </div>
     <div id="searchBox">
-        <form action="pokemonpage.php" method="GET" id="search">
+        <form action="search.php" method="GET" id="search">
             <input type="text" name="query" id="searchBar" placeholder="Search Pokemon Name">
         </form>
     </div>
