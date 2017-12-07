@@ -1,6 +1,5 @@
 <?php
 // Created by Professor Wergeles for CS2830 at the University of Missouri
-
 	if(!session_start()) {
 		header("Location: error.php");
 		exit;
@@ -28,6 +27,6 @@
 	
 	
 	// Redirect to login
-	header("Location: login.php");
+	header("Location: index.php");
 	exit;
 ?>

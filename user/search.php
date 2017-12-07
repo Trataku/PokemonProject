@@ -1,5 +1,19 @@
 <?php
-    require('web_utils.php');
+// Created by Professor Wergeles for CS2830 at the University of Missouri
+
+	// Every time we want to access $_SESSION, we have to call session_start()
+	if(!session_start()) {
+		header("Location: http://dylanmouser.epizy.com/pokemonproject/error.php");
+		exit;
+	}
+	
+	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
+	if (!$loggedIn) {
+		header("Location: http://dylanmouser.epizy.com/pokemonproject/index.php");
+		exit;
+	}
+?>
+<?php
     $query = $_GET['query'];
 	$action = $_POST['action'];
 	$data = null;
@@ -26,7 +40,7 @@
     $mysqli->close(); 
 
     if(!$poke){
-        header( 'Location: http://www.dylanmouser.epizy.com/pokemonproject/searcherror.php');
+        header( 'Location: http://www.dylanmouser.epizy.com/pokemonproject/user/searcherror.php');
     }
 
     $id = $poke['id'];
@@ -50,7 +64,7 @@
             $("input[type=submit]").button();
         });
         $(document).ready(function(){
-            var dir = "images/Sprites/";
+            var dir = "http://dylanmouser.epizy.com/pokemonproject/images/Sprites/";
             var extension = ".png";
             
             $("#pokeimg").attr('src', dir + <?php print $id ?> + extension).appendTo("#imgHolder");
@@ -60,30 +74,15 @@
 <body>
     <div id="informationBar">
          <ul>
-            <li><a href="http://dylanmouser.epizy.com/pokemonproject/index.php">Home</a></li>
-            <li><a href="http://dylanmouser.epizy.com/pokemonproject/pokemonpage.php">Pokemon</a></li>
-            <li><a href="http://dylanmouser.epizy.com/pokemonproject/pokemontypes.php">Types</a></li>
-             <li id="loginDropdown">
-                <a href="#">
-                    Log in
-                </a>
-                <div id="loginContent">
-                    <form action="login.php" method="POST">
-                        <fieldset id="inputs">
-                            <input type="hidden" name="action" value="do_login">
-                            <input type="text" id="user" name="user" class="ui-widget-content ui-corner-all" autofocus value="<?php print $user; ?>" placeholder="Username">
-                            <input type="password" id="pass" name="pass" class="ui-widget-content ui-corner-all" placeholder="Password">
-                        </fieldset>
-                        <fieldset>
-                            <input type="submit" value="Submit" class="submitButton">
-                        </fieldset>
-                    </form>
-                </div>
-            </li>
+            <li><a href="http://dylanmouser.epizy.com/pokemonproject/user/index.php">Home</a></li>
+            <li><a href="http://dylanmouser.epizy.com/pokemonproject/user/pokemonpage.php">Pokemon</a></li>
+            <li><a href="http://dylanmouser.epizy.com/pokemonproject/user/pokemontypes.php">Types</a></li>
+             <li class="loginView"><a href="http://dylanmouser.epizy.com/pokemonproject/user/loggedin.php">Team Builder</a></li>
+             <li class="loginView"><a href="http://dylanmouser.epizy.com/pokemonproject/logout.php">Log Out</a></li>
         </ul> 
     </div>
     <div id="searchBox">
-        <form action="http://dylanmouser.epizy.com/pokemonproject/search.php" method="GET" id="search">
+        <form action="http://dylanmouser.epizy.com/pokemonproject/user/search.php" method="GET" id="search">
             <input type="text" name="query" id="searchBar" placeholder="Search Pokemon Name">
         </form>
     </div>

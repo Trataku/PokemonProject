@@ -6,23 +6,15 @@
 	<link href="app.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        $(function(){
-            $("input[type=submit]").button();
-        });
     </script>
 </head>
 <body>
-    <?php
-        if ($error) {
-            print "<div class=\"ui-state-error\">$error</div>\n";
-        }
-    ?>
     <div id="informationBar">
          <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="pokemonpage.php">Pokemon</a></li>
-            <li><a href="pokemontypes.php">Types</a></li>
-            <li id="loginDropdown">
+            <li><a href="http://dylanmouser.epizy.com/pokemonproject/index.php">Home</a></li>
+            <li><a href="http://dylanmouser.epizy.com/pokemonproject/pokemonpage.php">Pokemon</a></li>
+            <li><a href="http://dylanmouser.epizy.com/pokemonproject/pokemontypes.php">Types</a></li>
+             <li id="loginDropdown">
                 <a href="#">
                     Log in
                 </a>
@@ -42,7 +34,7 @@
         </ul> 
     </div>
     <div id="searchBox">
-        <form action="search.php" method="GET" id="search">
+        <form action="http://dylanmouser.epizy.com/pokemonproject/search.php" method="GET" id="search">
             <input type="text" name="query" id="searchBar" placeholder="Search Pokemon Name">
         </form>
     </div>

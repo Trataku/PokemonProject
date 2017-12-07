@@ -17,7 +17,7 @@
 	$logIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
 	
 	if ($logIn) {
-		header("Location: page1.php");
+		header("Location: user/index.php");
 		exit;
 	}
 	
@@ -37,11 +37,11 @@
 		if ($user == "test" && $pass == "pass") {
 			// Instead of setting a cookie, we'll set a key/value pair in $_SESSION
 			$_SESSION['loggedin'] = $user;
-			header("Location: page1.php");
+			header("Location: user/index.php");
 			exit;
 		} else {
 			$error = 'Error: Incorrect username or password';
-			require "index.php";
+			require "error.php";
 		}		
 	}
 	
