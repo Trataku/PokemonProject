@@ -17,7 +17,7 @@
 	$logIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
 	
 	if ($logIn) {
-		header("Location: user/index.php");
+		header("Location: index.php");
 		exit;
 	}
 	
@@ -37,7 +37,7 @@
 		if ($user == "test" && $pass == "pass") {
 			// Instead of setting a cookie, we'll set a key/value pair in $_SESSION
 			$_SESSION['loggedin'] = $user;
-			header("Location: user/index.php");
+			header("Location: index.php");
 			exit;
 		} else {
 			$error = 'Error: Incorrect username or password';
