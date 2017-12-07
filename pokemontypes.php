@@ -13,7 +13,6 @@
          <ul>
             <li><a href="http://dylanmouser.epizy.com/pokemonproject/index.php">Home</a></li>
             <li><a href="http://dylanmouser.epizy.com/pokemonproject/pokemonpage.php">Pokemon</a></li>
-            <li><a href="http://dylanmouser.epizy.com/pokemonproject/pokemontypes.php">Types</a></li>
              <li id="loginDropdown">
                 <a href="#">
                     Log in

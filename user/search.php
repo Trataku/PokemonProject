@@ -40,7 +40,7 @@
     $mysqli->close(); 
 
     if(!$poke){
-        header( 'Location: http://www.dylanmouser.epizy.com/pokemonproject/user/searcherror.php');
+        header('Location: searcherror.php');
     }
 
     $id = $poke['id'];
@@ -76,7 +76,6 @@
          <ul>
             <li><a href="http://dylanmouser.epizy.com/pokemonproject/user/index.php">Home</a></li>
             <li><a href="http://dylanmouser.epizy.com/pokemonproject/user/pokemonpage.php">Pokemon</a></li>
-            <li><a href="http://dylanmouser.epizy.com/pokemonproject/user/pokemontypes.php">Types</a></li>
              <li class="loginView"><a href="http://dylanmouser.epizy.com/pokemonproject/user/loggedin.php">Team Builder</a></li>
              <li class="loginView"><a href="http://dylanmouser.epizy.com/pokemonproject/logout.php">Log Out</a></li>
         </ul> 
