@@ -1,13 +1,5 @@
 <?php
-    require('web_utils.php');
     $query = $_GET['query'];
-	$action = $_POST['action'];
-	$data = null;
-    
-    if(empty($query)){
-        $data = "<h4>Empty Search Query</h4>";
-        print($data);
-    }
 
     strtolower($query);
     ucfirst($query);
@@ -22,7 +14,7 @@
         }
         $result->close();
     }
-    
+
     $mysqli->close(); 
 
     if(!$poke){
@@ -37,7 +29,6 @@
     $speed = $poke['Speed'];
     $type = $poke['Type'];
 ?>
-
 <!DOCTYPE html>
 
 <html>
@@ -46,14 +37,11 @@
 	<link href="app.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        $(function(){
-            $("input[type=submit]").button();
-        });
         $(document).ready(function(){
-            var dir = "images/Sprites/";
+           var dir = "images/Sprites/";
             var extension = ".png";
             
-            $("#pokeimg").attr('src', dir + <?php print $id ?> + extension).appendTo("#imgHolder");
+            $(".pokeimg").attr("src", dir + <?php print $id ?> + extension);
         });
     </script>
 </head>
@@ -62,23 +50,17 @@
         require('navsearchbar.php');
     ?>
     <div id="imgHolder">
-        <img src="images/" alt="pokemonimg" id="pokeimg">
-        <p id="name"><?php 
-            if(!$poke){
-                $name = "Who's that pokemon!? Sorry. We can't find that Pokemon. Try another Pokemon from Generation 1.";
-            }
-            print $name; ?>
-        
-        </p>
+        <p id="name"><?php print $name?></p>
+        <img src="images/" alt="pokemonimg" class="pokeimg">
         <div class="statHolderLeft">
-            <p>HP: <?php  print $hp ?></p>
-            <p>ATK: <?php  print $attack ?></p>
+            <p>HP: <?php print $hp?></p>
+            <p>ATK: <?php print $attack?></p>
         </div>
         <div class="statHolderRight">
-            <p>DEF: <?php  print $def ?></p>
-            <p>SPD: <?php  print $speed ?></p>
+            <p>DEF: <?php print $def?></p>
+            <p>SPD: <?php print $speed?></p>
         </div>
-        <p id="type"><?php  print $type ?></p>
+        <p id="type"><?php print $type?></p>
     </div>
 </body>
 </html>

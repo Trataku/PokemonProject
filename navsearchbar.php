@@ -25,7 +25,7 @@ if(!isset($_SESSION['loggedin'])){?>
     </ul> 
 </div>
 <div id="searchBox">
-    <form action="http://dylanmouser.epizy.com/pokemonproject/search.php" method="GET" id="search">
+    <form id="search" action="search.php" method="GET">
         <input type="text" name="query" id="searchBar" placeholder="Search Pokemon Name">
     </form>
 </div>
@@ -39,7 +39,7 @@ if(!isset($_SESSION['loggedin'])){?>
         </ul> 
     </div>
     <div id="searchBox">
-        <form action="http://dylanmouser.epizy.com/pokemonproject/search.php" method="GET" id="search">
+        <form id="search" action="search.php" method="GET">
             <input type="text" name="query" id="searchBar" placeholder="Search Pokemon Name">
         </form>
     </div>
