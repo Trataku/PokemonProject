@@ -18,7 +18,7 @@
   ,Type   VARCHAR(9) NOT NULL
 );
 
- CREATE TABLE pokemon(
+  * CREATE TABLE userpokemon(
    id     INTEGER  NOT NULL PRIMARY KEY 
   ,name   VARCHAR(11) NOT NULL
   ,HP     INTEGER NOT NULL
@@ -31,5 +31,6 @@
  4. entity relationship diagram
  
  5. CRUD 
- 
+   * Create, Read, Update and Delete are all demonstrated within the website. Read is used upon using the search feature in search.php where a query is made to the pokemon table. The table sends back information about the pokemon in the query and displays it formatted on the page. 
+   * Create, Update and Delete are used in pokebox.php where you are able to create your own pokemon box, update it by adding more pokemon through queries, then delete them all by using an input button. The database queries pokemon table, the user has control over the userpokemon table where the updating, deleting and creation is happening. 
  6. video demonstration
