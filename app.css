@@ -212,3 +212,28 @@ p{
     position: absolute;
     top: 80%;
 }
+/*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*//*--------------------*/
+.pokeContainer{
+    overflow: auto;
+    position: absolute;
+    width: 99%;
+    top: 25%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.pokeContainer img{
+    width: 5%;
+    float: left;
+}
+
+.info{
+    top: 15%;
+    position: absolute;
+    text-align: center;
+    font-size: 32px;
+}
+
+#delete{
+    top: 10%;
+    position: absolute;
+}

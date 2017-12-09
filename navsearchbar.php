@@ -4,7 +4,6 @@ if(!isset($_SESSION['loggedin'])){?>
 <div id="informationBar">
      <ul>
         <li><a href="http://dylanmouser.epizy.com/pokemonproject/index.php">Home</a></li>
-        <li><a href="http://dylanmouser.epizy.com/pokemonproject/pokemonpage.php">Pokemon</a></li>
          <li id="loginDropdown">
             <a href="#">
                 Log in
@@ -33,8 +32,7 @@ if(!isset($_SESSION['loggedin'])){?>
 <div id="informationBar">
          <ul>
             <li><a href="http://dylanmouser.epizy.com/pokemonproject/index.php">Home</a></li>
-            <li><a href="http://dylanmouser.epizy.com/pokemonproject/pokemonpage.php">Pokemon</a></li>
-             <li class="loginView"><a href="http://dylanmouser.epizy.com/pokemonproject/loggedin.php">Team Builder</a></li>
+             <li class="loginView"><a href="pokebox.php">PokeBox</a></li>
              <li class="loginView"><a href="http://dylanmouser.epizy.com/pokemonproject/logout.php">Log Out</a></li>
         </ul> 
     </div>
