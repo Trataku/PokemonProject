@@ -28,9 +28,10 @@
   ,Type   VARCHAR(9) NOT NULL
 );
   
- 4. entity relationship diagram
+ 4. ![alt text](https://github.com/Trataku/PokemonProject/blob/master/Software_Design.png "entity relationship diagram")
  
  5. CRUD 
    * Create, Read, Update and Delete are all demonstrated within the website. Read is used upon using the search feature in search.php where a query is made to the pokemon table. The table sends back information about the pokemon in the query and displays it formatted on the page. 
    * Create, Update and Delete are used in pokebox.php where you are able to create your own pokemon box, update it by adding more pokemon through queries, then delete them all by using an input button. The database queries pokemon table, the user has control over the userpokemon table where the updating, deleting and creation is happening. 
  6. video demonstration
+  * [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/G_i4jbrcqyU/0.jpg)](http://www.youtube.com/watch?v=G_i4jbrcqyU)
